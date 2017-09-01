@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AppHeader from 'modules/AppHeader';
 import { CreateClassForm } from 'modules/CreateClassForm';
 import { Preview } from 'modules/Preview';
-import SpikeSheet from './components/SpikeSheet';
 import './App.css';
 import styled from 'styled-components';
 
@@ -26,7 +25,6 @@ class App extends Component {
         <Content>
           <CreateClassForm />
           <Preview />
-          <SpikeSheet />
         </Content>
       </Wrapper>
     );
