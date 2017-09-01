@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.4",
+    "prettier": "^1.6.1",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-controlled-form": "^1.2.2",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.12"
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.12",
+    "react-select": "^1.0.0-rc.5",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2"
   },
   "scripts": {
     "start": "react-scripts start",

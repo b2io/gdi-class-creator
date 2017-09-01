@@ -1,0 +1,7 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "sort-vars": "error",
+    "react/sort-prop-types": ["error", { "requiredFirst": true }]
+  }
+}
