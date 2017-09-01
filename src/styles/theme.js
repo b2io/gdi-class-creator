@@ -20,7 +20,6 @@ const theme = {
     small: '13px',
     medium: '14px',
   },
-  // borderRadius: '2px',
 
   color: {
     ...palette,
