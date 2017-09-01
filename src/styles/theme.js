@@ -1,4 +1,4 @@
-import { rgba, darken, tint, lighten } from 'polished';
+import { lighten } from 'polished';
 
 const palette = {
   gdi_pink: '#f05b62',
@@ -30,7 +30,7 @@ const theme = {
   },
 
   background: {
-	swirl: '././img/swirl.png',
+    swirl: '././img/swirl.png',
   },
 };
 
