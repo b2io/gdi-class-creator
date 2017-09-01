@@ -10,16 +10,16 @@ const palette = {
 };
 
 const theme = {
-  // fontFamily: 'Gotham, Roboto, Helvetica, Arial, sans-serif',
-  // monoFontFamily: 'Cutive Mono, monospace',
-  // cursiveFontFamily: 'Pacifico, cursive',
-  // fontSize: {
-  //   title: '20px',
-  //   subhead: '18px',
-  //   base: '14px',
-  //   small: '13px',
-  //   medium: '14px',
-  // },
+  fontFamily: 'Montserrat, Helvetica, Arial, sans-serif',
+  monoFontFamily: 'Cutive Mono, monospace',
+  cursiveFontFamily: 'Pacifico, cursive',
+  fontSize: {
+    title: '20px',
+    subhead: '18px',
+    base: '14px',
+    small: '13px',
+    medium: '14px',
+  },
   // borderRadius: '2px',
 
   color: {
