@@ -2,7 +2,7 @@
 
 const palette = {
   gdi_pink: '#f05b62',
-  dark_blue: '#f05b62',
+  dark_blue: '#2a4758',
   earth_yellow: '#d8ae64',
   mauve: '#a05258',
   white: '#ffffff',
@@ -14,7 +14,7 @@ const theme = {
   monoFontFamily: 'Cutive Mono, monospace',
   cursiveFontFamily: 'Pacifico, cursive',
   fontSize: {
-    title: '20px',
+    title: '40px',
     subhead: '18px',
     base: '14px',
     small: '13px',
@@ -23,6 +23,10 @@ const theme = {
 
   color: {
     ...palette,
+  },
+
+  background: {
+	swirl: '././img/swirl.png',
   },
 };
 
