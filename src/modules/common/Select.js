@@ -1,6 +1,16 @@
 import React, { PureComponent } from 'react';
 import Select from 'react-select';
+import styled from 'styled-components';
 import 'react-select/dist/react-select.css';
+
+const SelectStyled = styled(Select)`
+  .Select-control {
+    border: 1px solid ${props => props.theme.color.dark_gray};
+    &:focus {
+      border: 1px solid ${props => props.theme.color.gdi_pink};
+    }
+  }
+`;
 
 class SelectWrapper extends PureComponent {
   handleChange = e => {
@@ -19,7 +29,7 @@ class SelectWrapper extends PureComponent {
 
   render() {
     return (
-      <Select
+      <SelectStyled
         {...this.props}
         onBlur={this.handleBlur}
         onChange={this.handleChange}

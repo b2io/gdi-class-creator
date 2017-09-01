@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { px2em } from 'styles/functions';
 import { Form } from 'react-controlled-form';
 import { FormField, Label, Select, SubmitButton } from 'modules/common';
 
-const FormGroup = styled.div`border: 1px solid pink;`;
+const FormGroup = styled.div`margin-bottom: ${px2em(10)};`;
 
 function CreateClassForm() {
   return (

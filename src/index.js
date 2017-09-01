@@ -5,12 +5,17 @@ import configureStore from './configureStore';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { ThemeProvider } from 'styled-components';
+import theme from 'styles/theme';
+import 'styles/base';
 
 const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </Provider>,
   document.getElementById('root'),
 );
