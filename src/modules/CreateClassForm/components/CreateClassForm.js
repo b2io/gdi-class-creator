@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { px2em } from 'styles/functions';
 import { Form } from 'react-controlled-form';
 import { Button, FormField, Label, Select, SubmitButton } from 'modules/common';
 
-const FormGroup = styled.div`border: 1px solid pink;`;
+const FormGroup = styled.div`margin-bottom: ${px2em(10)};`;
 
 function CreateClassForm({ onSubmit }) {
   return (
@@ -44,7 +45,7 @@ function CreateClassForm({ onSubmit }) {
       </FormGroup>
 
       <FormGroup>
-        <Label>Location/Sponsor:</Label>
+        <Label>Location/Sponsor</Label>
         <FormField
           fieldId="sponsor"
           name="sponsor"

@@ -1,9 +1,12 @@
-import React from 'react';
+// import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { baseButton, defaultButton } from 'styles/mixins';
 
-function Button({ children, ...rest }) {
-  return <button {...rest}>{children}</button>;
-}
+const Button = styled.button`
+  ${baseButton()};
+  ${defaultButton()};
+`;
 
 Button.propTypes = {
   children: PropTypes.node,
