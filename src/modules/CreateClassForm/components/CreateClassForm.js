@@ -45,7 +45,7 @@ function CreateClassForm({ onSubmit }) {
       </FormGroup>
 
       <FormGroup>
-        <Label>Location/Sponsor:</Label>
+        <Label>Location/Sponsor</Label>
         <FormField
           fieldId="sponsor"
           name="sponsor"
