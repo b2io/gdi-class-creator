@@ -1,4 +1,4 @@
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 const palette = {
   gdi_pink: '#f05b62',
@@ -26,7 +26,9 @@ const theme = {
     ...palette,
     greyLight: lighten(0.25, palette.grey),
     buttonBackground: palette.gdi_pink,
-    buttonBackgroundHover: palette.earth_yellow,
+    buttonBackgroundHover: palette.mauve,
+    buttonBackgroundSecondary: palette.earth_yellow,
+    buttonBackgroundSecondaryHover: darken(0.1, palette.earth_yellow),
   },
 
   background: {

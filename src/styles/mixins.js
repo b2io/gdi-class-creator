@@ -53,6 +53,14 @@ export const defaultButton = () => css`
   }
 `;
 
+export const secondaryButton = () => css`
+  background: ${theme.color.buttonBackgroundSecondary};
+  color: ${theme.color.white};
+  &:hover {
+    background: ${theme.color.buttonBackgroundSecondaryHover};
+  }
+`;
+
 // export const invertedButton = () => css`
 //   background: ${theme.color.lightBackground};
 //   color: ${theme.color.buttonBackground};
