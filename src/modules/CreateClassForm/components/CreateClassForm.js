@@ -41,7 +41,7 @@ function CreateClassForm({ onSubmit }) {
           type={Select} // TODO add date select component
           placeholder="Add a class date"
         />
-        <Button>Add another class date</Button>
+        <Button secondary>Add another class date</Button>
       </FormGroup>
 
       <FormGroup>
