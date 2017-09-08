@@ -1,35 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from 'styles/theme';
+import AppTitle from './AppTitle';
+import Logo from './Logo';
 
-const Wrapper = styled.header`
-  align-items: center;
+const Wrapper = styled.div`
   background: ${theme.color.dark_gray};
   background-image: url(${theme.background.swirl});
   background-size: 4em;
-  display: flex;
-  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 600px) 1fr;
+  grid-template-areas: '. header-content .';
+  grid-area: header;
   margin: 0 0 2em;
+`;
 
-  h1 {
-    color: ${theme.color.white};
-    font-family: ${theme.cursiveFontFamily};
-    font-size: ${theme.fontSize.title};
-    margin: 0 0 0 0.5em;
-    padding: 0;
-  }
-
-  img {
-    height: 8em;
-    width: 8em;
-  }
+const Header = styled.header`
+  align-items: center;
+  display: flex;
+  grid-area: header-content;
+  padding: 1em;
 `;
 
 function AppHeader() {
   return (
     <Wrapper>
-      <img src="./img/circle-gdi-logo.svg" alt="Girl Develop It - Don't be shy, develop it!" />
-      <h1>Class Creator</h1>
+      <Header>
+        <Logo
+          src="./img/circle-gdi-logo.svg"
+          alt="Girl Develop It - Don't be shy, develop it!"
+          title="Girl Develop It - Don't be shy, develop it!"
+        />
+        <AppTitle>Class Creator</AppTitle>
+      </Header>
     </Wrapper>
   );
 }
