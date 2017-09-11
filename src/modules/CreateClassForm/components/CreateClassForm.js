@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { px2em } from 'styles/functions';
 import { Form } from 'react-controlled-form';
-import { Button, FormField, Label, Select, SubmitButton } from 'modules/common';
+import { Button, DateSelect, FormField, Label, Select, SubmitButton } from 'modules/common';
 
 const FormGroup = styled.div`margin-bottom: ${px2em(10)};`;
 
@@ -37,9 +37,7 @@ function CreateClassForm({ onSubmit }) {
         <FormField
           fieldId="date"
           name="date"
-          options={[{ value: '1', label: 'Imagine dates' }]}
-          type={Select} // TODO add date select component
-          placeholder="Add a class date"
+          type={DateSelect} // TODO add date select component
         />
         <Button secondary>Add another class date</Button>
       </FormGroup>
