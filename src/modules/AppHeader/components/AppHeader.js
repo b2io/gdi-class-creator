@@ -5,7 +5,7 @@ import AppTitle from './AppTitle';
 import Logo from './Logo';
 
 const Wrapper = styled.div`
-  background: ${theme.color.dark_gray};
+  background: ${theme.color.dark_grey};
   background-image: url(${theme.background.swirl});
   background-size: 4em;
   display: grid;

@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { px2em } from 'styles/functions';
 import { Form } from 'react-controlled-form';
-import { Button, DateSelect, FormField, Label, Select, SubmitButton } from 'modules/common';
+import {
+  Button,
+  DateSelect,
+  FormField,
+  Label,
+  Select,
+  SubmitButton,
+  TimeInput,
+} from 'modules/common';
 
 const FormGroup = styled.div`margin-bottom: ${px2em(10)};`;
 
@@ -23,13 +31,7 @@ function CreateClassForm({ onSubmit }) {
 
       <FormGroup>
         <Label>Time</Label>
-        <FormField
-          fieldId="time"
-          name="time"
-          options={[{ value: '1', label: 'Imagine times' }]}
-          type={Select} // TODO add time select component
-          placeholder="Add class time"
-        />
+        <TimeInput />
       </FormGroup>
 
       <FormGroup>
@@ -49,7 +51,6 @@ function CreateClassForm({ onSubmit }) {
           name="sponsor"
           options={[{ value: '1', label: 'Cardinal Solutions' }]}
           type={Select}
-          placeholder="Select a sponsor"
         />
       </FormGroup>
 

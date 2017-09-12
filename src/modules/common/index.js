@@ -7,6 +7,7 @@ import Select from './Select';
 import SubmitButton from './SubmitButton';
 import Textarea from './Textarea';
 import TextInput from './TextInput';
+import TimeInput from './TimeInput';
 import ValidationError from './ValidationError';
 
 export {
@@ -19,5 +20,6 @@ export {
   SubmitButton,
   Textarea,
   TextInput,
+  TimeInput,
   ValidationError,
 };

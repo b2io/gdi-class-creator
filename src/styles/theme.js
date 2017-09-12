@@ -7,7 +7,8 @@ const palette = {
   mauve: '#a05258',
   white: '#ffffff',
   grey: '#aaa',
-  dark_gray: '#333333',
+  light_grey: '#ccc',
+  dark_grey: '#333333',
 };
 
 const theme = {
