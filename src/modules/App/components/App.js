@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AppHeader from 'modules/AppHeader';
 import { CreateClassForm } from 'modules/CreateClassForm';
 import { Preview } from 'modules/Preview';
-import './App.css';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -17,18 +16,16 @@ const Content = styled.div`
   padding: 0 1em;
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <Wrapper>
-        <AppHeader />
-        <Content>
-          <CreateClassForm />
-          <Preview />
-        </Content>
-      </Wrapper>
-    );
-  }
+function App({ description, options }) {
+  return (
+    <Wrapper>
+      <AppHeader />
+      <Content>
+        <CreateClassForm {...options} />
+        <Preview description={description} />
+      </Content>
+    </Wrapper>
+  );
 }
 
 export default App;
