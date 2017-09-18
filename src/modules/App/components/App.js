@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppHeader from 'modules/AppHeader';
 import { CreateClassForm } from 'modules/CreateClassForm';
 import { Preview } from 'modules/Preview';
@@ -16,16 +17,22 @@ const Content = styled.div`
   padding: 0 1em;
 `;
 
-function App({ description, options }) {
+function App({ onSubmit, options }) {
   return (
     <Wrapper>
       <AppHeader />
       <Content>
-        <CreateClassForm {...options} />
-        <Preview description={description} />
+        <CreateClassForm {...options} onSubmit={onSubmit} />
+        <Preview />
       </Content>
     </Wrapper>
   );
 }
+
+App.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+
+  options: PropTypes.object,
+};
 
 export default App;

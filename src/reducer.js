@@ -1,8 +1,8 @@
-import createClassForm from 'modules/CreateClassForm';
+import createClassReducer from 'modules/App';
 import { combineReducers } from 'redux';
 
 const reducer = combineReducers({
-  createClassForm,
+  createClass: createClassReducer,
 });
 
 export default reducer;

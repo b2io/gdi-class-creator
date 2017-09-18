@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { selectForm } from 'modules/CreateClassForm';
+import { selectCreateClass } from 'modules/App';
 import Preview from '../components/Preview';
 
-const mapStateToProps = selectForm;
+const mapStateToProps = state => selectCreateClass(state);
 
 export default connect(mapStateToProps)(Preview);

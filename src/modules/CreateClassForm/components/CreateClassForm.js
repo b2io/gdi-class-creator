@@ -33,22 +33,24 @@ function CreateClassForm(props) {
   return (
     <Form formId="create-class-form" onSubmit={onSubmit}>
       <FormGroup>
-        <Label>Class Information</Label>
+        <Label isRequired>Class Information</Label>
         <FormField
-          fieldId="class"
-          name="class"
+          fieldId="course"
+          name="course"
           options={classes}
           placeholder="Select a class name"
+          required
           type={Select}
         />
       </FormGroup>
       <FormGroup>
-        <Label>Time</Label>
+        <Label isRequired>Time</Label>
         <FormField
           fieldId="time"
           name="time"
-          options={[{ value: '1', label: 'Imagine times' }]}
+          options={[{ value: 1, label: 'Imagine times' }]}
           placeholder="Add class time"
+          required
           type={Select} // TODO add time select component
         />
       </FormGroup>
@@ -69,12 +71,13 @@ function CreateClassForm(props) {
       </FormGroup>
       <YesNoGroup fieldId="refreshments" label="Refreshments" />
       <FormGroup>
-        <Label>Instructor</Label>
+        <Label isRequired>Instructor</Label>
         <FormField
           fieldId="instructor"
           name="instructor"
           options={instructors}
           placeholder="Select the instructor"
+          required
           type={Select}
         />
       </FormGroup>
@@ -90,16 +93,6 @@ function CreateClassForm(props) {
         />
       </FormGroup>
       <YesNoGroup fieldId="scholarship" label="Scholarship Information" />
-      <FormGroup>
-        <Label>Technology Requirements</Label>
-        <FormField
-          fieldId="prereqs"
-          name="prereqs"
-          options={classes}
-          placeholder="Select the pre-reqs"
-          type={Select}
-        />
-      </FormGroup>
       <YesNoGroup fieldId="laptop" label="Loaner Laptop" />
       <SubmitButton>Create Description!</SubmitButton>
     </Form>
