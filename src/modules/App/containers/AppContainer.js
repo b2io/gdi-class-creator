@@ -8,7 +8,6 @@ import { LoadingIndicator, SignInButton } from 'modules/common';
 import App from '../components/App';
 import { submit } from '../actions';
 
-// TODO: Better way to map data
 const toOption = ([label], value) => ({ value, label });
 const toCourse = ([name, description, prerequisites], id) => ({
   name,
@@ -75,7 +74,6 @@ const withSignInButton = branch(
   renderComponent(SignInButton),
 );
 
-// TODO: Figure out how to transform data to pass into Preview
 const toPreviewValue = (id, values) => find(values, { id });
 const getValue = key => get(`${key}.value`);
 const toPolicies = policies =>
@@ -89,10 +87,7 @@ const toPolicies = policies =>
 
 const handleSubmit = props => event => {
   const formData = mapDataToValues(event.data);
-  console.log(props.values);
 
-  // TODO: Map through each value type and convert toPreviewValue instead,
-  // will probably need to change form ids, especially classes => courses
   props.onSubmit({
     course: toPreviewValue(formData.course.value, props.values.classes),
     contact: toPreviewValue(formData.contact.value, props.values.contacts),
