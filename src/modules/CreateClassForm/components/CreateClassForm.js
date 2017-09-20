@@ -20,7 +20,7 @@ const YesNoGroup = ({ fieldId, label, placeholder }) => (
     <FormField
       fieldId={fieldId}
       name={fieldId}
-      options={[{ value: 1, label: 'Yes' }, { value: 0, label: 'No' }]}
+      options={[{ value: true, label: 'Yes' }, { value: false, label: 'No' }]}
       placeholder="Select yes or no"
       type={Select}
     />

@@ -10,10 +10,10 @@ import { submit } from '../actions';
 
 // TODO: Better way to map data
 const toOption = ([label], value) => ({ value, label });
-const toCourse = ([name, description, techRequirements], id) => ({
+const toCourse = ([name, description, prerequisites], id) => ({
   name,
   description,
-  techRequirements,
+  prerequisites,
   id,
 });
 const toContact = ([name, contactInformation], id) => ({
@@ -21,10 +21,7 @@ const toContact = ([name, contactInformation], id) => ({
   contactInformation,
   id,
 });
-const toInstructor = (
-  [name, bio, imageUrl, email, github, twitter, linkedin],
-  id,
-) => ({ name, bio, imageUrl, email, github, twitter, linkedin, id });
+const toInstructor = ([name, bio], id) => ({ name, bio, id });
 const toSponsor = ([name, address, logoUrl, notes], id) => ({
   name,
   address,
@@ -106,10 +103,10 @@ const handleSubmit = props => event => {
     sponsor: toPreviewValue(formData.sponsor.value, props.values.sponsors),
     time: getValue('time')(formData),
     date: getValue('date')(formData),
-    // hasLaptop: getValue('laptop')(formData),
-    // hasRefreshments: getValue('refreshments')(formData),
-    // hasScholarships: getValue('scholarship')(formData),
-    // isPaidCourse: getValue('paid')(formData),
+    hasLaptop: getValue('laptop')(formData),
+    hasRefreshments: getValue('refreshments')(formData),
+    hasScholarships: getValue('scholarship')(formData),
+    isPaid: getValue('paid')(formData),
     policies: toPolicies(props.values.policies),
   });
 };

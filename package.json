@@ -5,7 +5,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "polished": "^1.7.0",
-    "prettier": "^1.6.1",
+    "prettier": "^1.7.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-controlled-form": "^1.2.2",
